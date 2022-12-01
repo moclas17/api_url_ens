@@ -17,7 +17,7 @@ app.get('/', async (req, res) => {
     console.log(req.query.data);
     let domain=req.query.data;
     let miurl = await getlink(domain+".eth");
-    res.send(domain + " :  "+ miurl); //sabes por que miurl regresa [object Promise] en el navegador
+    res.send(miurl); //sabes por que miurl regresa [object Promise] en el navegador
 });
 
 // Listen to the App Engine-specified port, or 8080 otherwise
